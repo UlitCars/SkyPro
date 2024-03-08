@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         //Home Work 1
         byte b = 8;
         short s = 32;
