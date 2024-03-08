@@ -57,10 +57,10 @@ public class Main {
         int milk = 105 * 2;
         int iceCream = 100 * 2;
         int eggs = 4 * 70;
-        double totalGrams = bananas + milk + iceCream + eggs;
-        double totalWeight = totalGrams / 1000.0;  // Не смог найти адекватного решения, для конвертирования веса из грамм в кг.
-        //Результат 62 строки в данном виде у меня 1.09
-        System.out.println("Общий вес завтрака " + eggs + " грамм");
+        int totalGrams = bananas + milk + iceCream + eggs;
+        double convert = 0.001;
+        double totalWeight = totalGrams * convert;
+        System.out.println("Общий вес завтрака " + totalGrams + " грамм");
         System.out.println("Общий вес завтрака " + totalWeight + " кг");
 
         //Home Work 7
