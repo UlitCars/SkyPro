@@ -59,8 +59,19 @@ public class Main {
         } else {
             System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
         }
-        //Home Work 6
-
+        //Home Work 7
+        int one = 1;
+        int two = 2;
+        int tree = 3;
+        if (one > two && one > tree){
+            System.out.println("Наибольшее число " + one);
+        } else if (two > one && two > tree){
+            System.out.println("Наибольшее число " + two);
+        } else if (tree > one && tree > two){
+            System.out.println("Наибольшее число " + tree);
+        } else {
+            System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
+        }
 
 
     }
