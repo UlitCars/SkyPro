@@ -47,6 +47,20 @@ public class Main {
             System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
         }
         //Home Work 6
+        int people = 73;
+        int seat = 60;
+        int stand = 102 - 60;
+        if (people <= 60){
+            System.out.println("Есть сидячие места");
+        } else if (people > 60 && people <= 102){
+            System.out.println("Остались только стоячие места");
+        } else if (people == 102){
+            System.out.println("Вагон полн, мест совсем нет!");
+        } else {
+            System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
+        }
+        //Home Work 6
+
 
 
     }
