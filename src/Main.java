@@ -1,28 +1,28 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Home Work 1
+        //Lesson 2 Home Work 1
         int age = 31;
         if ( age >= 18) {
             System.out.println("Человек совершеннолетний!");
         } else {
             System.out.println("Человек не совершеннолетний!");
         }
-        //Home Work 2
+        //Lesson 2 Home Work 2
         int temp = 11;
         if ( temp >= 5){
             System.out.println("Сегодня тепло, можно идти без шапки");
         } else {
             System.out.println("На улице холодно, нужно надеть шапку");
         }
-        //Home Work 3
+        //Lesson 2 Home Work 3
         int speed = 43;
         if ( speed <= 60 ){
             System.out.println("Превышения скорости нет");
         } else {
             System.out.println("Скорость превышена!");
         }
-        //Home Work 4
+        //Lesson 2 Home Work 4
         int age2 = 31;
         if (age2 >= 2 && age2 <= 6){
             System.out.println("Нужно ходить в детский сад");
@@ -35,7 +35,7 @@ public class Main {
         } else {
             System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
         }
-        //Home Work 5
+        //Lesson 2 Home Work 5
         int ageKids = 17;
         if (ageKids < 5){
             System.out.println("Ребёнку нельзя кататься на аттракционах");
@@ -46,7 +46,7 @@ public class Main {
         } else {
             System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
         }
-        //Home Work 6
+        //Lesson 2 Home Work 6
         int people = 73;
         int seat = 60;
         int stand = 102 - 60;
@@ -59,7 +59,7 @@ public class Main {
         } else {
             System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
         }
-        //Home Work 7
+        //Lesson 2 Home Work 7
         int one = 1;
         int two = 2;
         int tree = 3;
