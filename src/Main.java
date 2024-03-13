@@ -1,77 +1,32 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Lesson 2 Home Work 1
-        int age = 31;
-        if ( age >= 18) {
-            System.out.println("Человек совершеннолетний!");
+        //Lesson 4 Home Work 1
+        byte clientOS = 0;
+        if (clientOS == 1){
+            System.out.println("Установите приложение для Android по ссылке:");
         } else {
-            System.out.println("Человек не совершеннолетний!");
+            System.out.println("Установите приложение для iOS по ссылке:");
         }
-        //Lesson 2 Home Work 2
-        int temp = 11;
-        if ( temp >= 5){
-            System.out.println("Сегодня тепло, можно идти без шапки");
+        //Lesson 4 Home Work 2
+        int clientDeviceYear = 2013;
+        if (clientOS == 0 && clientDeviceYear >= 2015){
+            System.out.println("Установите приложение для iOS по ссылке:");
+        } else if (clientOS == 0 && clientDeviceYear < 2015){
+            System.out.println("Установите облегченную версию приложение для iOS по ссылке:");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015){
+            System.out.println("Установите приложение для Android по ссылке:");
+        } else if (clientOS == 1 && clientDeviceYear < 2015){
+            System.out.println("Установите облегченную версию приложение для Android по ссылке:");
         } else {
-            System.out.println("На улице холодно, нужно надеть шапку");
+            System.out.println("Версия ОС не определена!");
         }
-        //Lesson 2 Home Work 3
-        int speed = 43;
-        if ( speed <= 60 ){
-            System.out.println("Превышения скорости нет");
-        } else {
-            System.out.println("Скорость превышена!");
-        }
-        //Lesson 2 Home Work 4
-        int age2 = 31;
-        if (age2 >= 2 && age2 <= 6){
-            System.out.println("Нужно ходить в детский сад");
-        } else if (age2 >= 7 && age2 <= 17){
-            System.out.println("Нужно ходить в школу");
-        } else if (age2 >= 18 && age2 <= 24){
-            System.out.println("Нужно ходить в университет");
-        } else if (age2 > 24){
-            System.out.println("Нужно ходить на работу");
-        } else {
-            System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
-        }
-        //Lesson 2 Home Work 5
-        int ageKids = 17;
-        if (ageKids < 5){
-            System.out.println("Ребёнку нельзя кататься на аттракционах");
-        } else if (ageKids >= 5 && ageKids <= 14){
-            System.out.println("Ребёнку можно кататься только в сопровождении взрослых!");
-        } else if (ageKids > 14){
-            System.out.println("Ребёнок может кататься один");
-        } else {
-            System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
-        }
-        //Lesson 2 Home Work 6
-        int people = 73;
-        int seat = 60;
-        int stand = 102 - 60;
-        if (people <= 60){
-            System.out.println("Есть сидячие места");
-        } else if (people > 60 && people <= 102){
-            System.out.println("Остались только стоячие места");
-        } else if (people == 102){
-            System.out.println("Вагон полн, мест совсем нет!");
-        } else {
-            System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
-        }
-        //Lesson 2 Home Work 7
-        int one = 1;
-        int two = 2;
-        int tree = 3;
-        if (one > two && one > tree){
-            System.out.println("Наибольшее число " + one);
-        } else if (two > one && two > tree){
-            System.out.println("Наибольшее число " + two);
-        } else if (tree > one && tree > two){
-            System.out.println("Наибольшее число " + tree);
-        } else {
-            System.out.println("Такого условия не предусмотренно, проверьте корректность введеных данных");
-        }
+        //Lesson 4 Home Work 3
+
+        //Lesson 4 Home Work 4
+
+        //Lesson 4 Home Work 5
+
 
     }
 }
