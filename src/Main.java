@@ -23,7 +23,9 @@ public class Main {
         }
         //Lesson 4 Home Work 3
         int years = 2024;
-        if (years % 4 == 0 && years % 400 == 0 && years % 100 != 0){
+        if (years % 4 == 0 && years % 100 != 0){
+            System.out.println(years + " год является високосным!");
+        } else if ( years % 400 == 0){
             System.out.println(years + " год является високосным!");
         } else {
             System.out.println(years + " год не является високосным.");
