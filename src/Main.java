@@ -1,90 +1,52 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Lesson 4 Home Work 1
-        byte clientOS = 0;
-        if (clientOS == 1){
-            System.out.println("Установите приложение для Android по ссылке:");
-        } else {
-            System.out.println("Установите приложение для iOS по ссылке:");
+        //Lesson 5 Home Work 1
+        for ( int i = 1; i < 11; i++) {
+            System.out.println(i);
         }
-        //Lesson 4 Home Work 2
-        int clientDeviceYear = 2013;
-        if (clientOS == 0 && clientDeviceYear >= 2015){
-            System.out.println("Установите приложение для iOS по ссылке:");
-        } else if (clientOS == 0 && clientDeviceYear < 2015){
-            System.out.println("Установите облегченную версию приложение для iOS по ссылке:");
-        } else if (clientOS == 1 && clientDeviceYear >= 2015){
-            System.out.println("Установите приложение для Android по ссылке:");
-        } else if (clientOS == 1 && clientDeviceYear < 2015){
-            System.out.println("Установите облегченную версию приложение для Android по ссылке:");
-        } else {
-            System.out.println("Версия ОС не определена!");
+        //Lesson 5 Home Work 2
+        for ( int i = 10; i > 0; i--) {
+            System.out.println(i);
         }
-        //Lesson 4 Home Work 3
-        int years = 2024;
-        if ((years % 4 == 0 && years % 100 != 0) || years % 400 == 0){
-            System.out.println(years + " год является високосным!");
-        } else {
-            System.out.println(years + " год не является високосным.");
+        //Lesson 5 Home Work 3
+        for ( int i = 0; i < 18; i = i + 2) {
+            System.out.println(i);
         }
-        //Lesson 4 Home Work 4
-        int deliveryDistans = 95;
-        int deliveryDays = 0;
-        if (deliveryDistans < 20 && deliveryDistans >= 0){
-            deliveryDays++;
-        } else if (deliveryDistans >= 20 && deliveryDistans < 60){
-            deliveryDays++;
-            deliveryDays++;
-        } else if (deliveryDistans >= 60 && deliveryDistans <= 100){
-            deliveryDays++;
-            deliveryDays++;
-            deliveryDays++;
-        } else {
-            System.out.println("Так далеко не доставляем!");
+        //Lesson 5 Home Work 4
+        for ( int i = 10; i > -11; i--) {
+            System.out.println(i);
         }
-        System.out.println("Потребуется дней: " + deliveryDays);
-        //Lesson 4 Home Work 5
-        int monthNumber = 3;
-        switch (monthNumber){
-            case 1:
-                System.out.println("Сейчас зима, месяц январь.");
-                break;
-            case 2:
-                System.out.println("Сейчас зима, месяц февраль.");
-                break;
-            case 3:
-                System.out.println("Сейчас весна, месяц март.");
-                break;
-            case 4:
-                System.out.println("Сейчас весна, месяц апрель.");
-                break;
-            case 5:
-                System.out.println("Сейчас весна, месяц май.");
-                break;
-            case 6:
-                System.out.println("Сейчас лето, месяц июнь.");
-                break;
-            case 7:
-                System.out.println("Сейчас лето, месяц июль.");
-                break;
-            case 8:
-                System.out.println("Сейчас лето, месяц август.");
-                break;
-            case 9:
-                System.out.println("Сейчас осень, месяц сентябрь.");
-                break;
-            case 10:
-                System.out.println("Сейчас осень, месяц октябрь.");
-                break;
-            case 11:
-                System.out.println("Сейчас осень, месяц ноябрь.");
-                break;
-            case 12:
-                System.out.println("Сейчас зима, месяц декабрь.");
-                break;
-            default:
-                System.out.println("Не корректно указан номер месяца!");
+        //Lesson 5 Home Work 5
+        for ( int i = 1904; i < 2096; i = i + 4) {
+            System.out.println(i + " год является високостным.");
+        }
+        //Lesson 5 Home Work 6
+        for ( int i = 7; i < 99; i = i + 7) {
+            System.out.println(i);
+        }
+        //Lesson 5 Home Work 7
+        for ( int i = 1; i < 513; i = i * 2) {
+            System.out.println(i);
+        }
+        //Lesson 5 Home Work 8
+        int sum = 0;
+        for ( int i = 1; i < 13; i++) {
+            sum = sum + 29000;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum + " рублей.");
+        }
+        //Lesson 5 Home Work 9
+        int sumInBank = 0;
+        for ( int i = 1; i < 13; i++) {
+            sumInBank = sumInBank + ( sumInBank / 100 );
+            sumInBank = sumInBank + 29000;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + sumInBank + " рублей.");
+        }
+        //Lesson 5 Home Work 10
+        int result = 0;
+        for ( int i = 1; i < 11; i++) {
+            result = 2 * i;
+            System.out.println("2 * " + i + " = " + result);
+        }
         }
     }
-}
