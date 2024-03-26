@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -6,7 +8,6 @@ public class Main {
         int month = 0;
         int salary = 15000;
         do {
-            sumInBank = sumInBank + (sumInBank / 100);
             sumInBank = sumInBank + 15000;
             month = month + 1;
             System.out.println("Месяц " + month + ", накопленная сумма " + sumInBank + "рублей.");
@@ -38,7 +39,7 @@ public class Main {
             y = y + ((y / 1000 * birthRate) - (y / 1000 * mortality));
             System.out.println("Год " + year + ", численность населения состовляет " + y + " человек.");
         }
-        while ( year < 10);
+        while (year < 10);
 
         //Lesson 6 Home Work 4
         int sum = 0;
@@ -61,7 +62,7 @@ public class Main {
             monthB++;
             sumA = sumA + (sumA / 100) * interestRateA;
             sumA = sumA + contributionA;
-            if ( monthB % 6 == 0 ){
+            if (monthB % 6 == 0) {
                 System.out.println("Месяц " + monthB + ", сумма накоплений " + sumA + " рублей.");
             }
         } while (sumA <= 12_000_000);
@@ -75,29 +76,23 @@ public class Main {
             monthC++;
             sumB = sumB + (sumB / 100) * interestRateB;
             sumB = sumB + contrbutionB;
-            if (monthC % 6 == 0){
+            if (monthC % 6 == 0) {
                 System.out.println("Месяц " + monthC + ", сумма накоплений " + sumB + " рублей.");
             }
         } while (monthC < 108);
 
         //Lesson 6 Home Work 7
         int friday = 5;
-        while (friday <=31){
+        while (friday <= 31) {
             System.out.println("Сегодня " + friday + " число, пятница! Надо подготовить отчет.");
             friday += 7;
         }
 
         //Lesson 6 Home Work 8
-        int juniorYear = 1824;
-        int endYear = 2124;
-        int realYear = 0;
-        while (realYear < endYear){
-            realYear += 79;
-            if (realYear >juniorYear & realYear < endYear){
-                System.out.println(realYear);
+        for (int yearA = 2024 - 200; yearA < 2024 + 100; yearA++) {
+            if (yearA % 79 == 0) {
+                System.out.println(yearA);
             }
         }
-
-
     }
 }
