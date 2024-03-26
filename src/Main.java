@@ -1,52 +1,103 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Lesson 5 Home Work 1
-        for ( int i = 1; i < 11; i++) {
-            System.out.println(i);
-        }
-        //Lesson 5 Home Work 2
-        for ( int i = 10; i > 0; i--) {
-            System.out.println(i);
-        }
-        //Lesson 5 Home Work 3
-        for ( int i = 0; i < 18; i = i + 2) {
-            System.out.println(i);
-        }
-        //Lesson 5 Home Work 4
-        for ( int i = 10; i > -11; i--) {
-            System.out.println(i);
-        }
-        //Lesson 5 Home Work 5
-        for ( int i = 1904; i < 2096; i = i + 4) {
-            System.out.println(i + " год является високостным.");
-        }
-        //Lesson 5 Home Work 6
-        for ( int i = 7; i < 99; i = i + 7) {
-            System.out.println(i);
-        }
-        //Lesson 5 Home Work 7
-        for ( int i = 1; i < 513; i = i * 2) {
-            System.out.println(i);
-        }
-        //Lesson 5 Home Work 8
-        int sum = 0;
-        for ( int i = 1; i < 13; i++) {
-            sum = sum + 29000;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum + " рублей.");
-        }
-        //Lesson 5 Home Work 9
+        //Lesson 6 Home Work 1
         int sumInBank = 0;
-        for ( int i = 1; i < 13; i++) {
-            sumInBank = sumInBank + ( sumInBank / 100 );
-            sumInBank = sumInBank + 29000;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sumInBank + " рублей.");
+        int month = 0;
+        int salary = 15000;
+        do {
+            sumInBank = sumInBank + (sumInBank / 100);
+            sumInBank = sumInBank + 15000;
+            month = month + 1;
+            System.out.println("Месяц " + month + ", накопленная сумма " + sumInBank + "рублей.");
         }
-        //Lesson 5 Home Work 10
-        int result = 0;
-        for ( int i = 1; i < 11; i++) {
-            result = 2 * i;
-            System.out.println("2 * " + i + " = " + result);
+        while (sumInBank < 2459000);
+
+        //Lesson 6 Home Work 2
+        int a = 0;
+        do {
+            a++;
+            System.out.print(a + " ");
         }
+        while (a < 10);
+        System.out.println();
+        do {
+            System.out.print(a + " ");
+            a--;
         }
+        while (a > 0);
+        System.out.println();
+
+        //Lesson 6 Home Work 3
+        int y = 12_000_000;
+        int birthRate = 17;
+        int mortality = 8;
+        int year = 0;
+        do {
+            year++;
+            y = y + ((y / 1000 * birthRate) - (y / 1000 * mortality));
+            System.out.println("Год " + year + ", численность населения состовляет " + y + " человек.");
+        }
+        while ( year < 10);
+
+        //Lesson 6 Home Work 4
+        int sum = 0;
+        int contribution = 15000;
+        int interestRate = 7;
+        int monthA = 0;
+        do {
+            monthA++;
+            sum = sum + (sum / 100) * interestRate;
+            sum = sum + contribution;
+            System.out.println("Месяц " + monthA + ", сумма накоплений " + sum + " рублей.");
+        } while (sum <= 12_000_000);
+
+        //Lesson 6 Home Work 5
+        int sumA = 0;
+        int contributionA = 15000;
+        int interestRateA = 7;
+        int monthB = 0;
+        do {
+            monthB++;
+            sumA = sumA + (sumA / 100) * interestRateA;
+            sumA = sumA + contributionA;
+            if ( monthB % 6 == 0 ){
+                System.out.println("Месяц " + monthB + ", сумма накоплений " + sumA + " рублей.");
+            }
+        } while (sumA <= 12_000_000);
+
+        //Lesson 6 Home Work 6
+        int contrbutionB = 15000;
+        int sumB = 0;
+        int interestRateB = 7;
+        int monthC = 0;
+        do {
+            monthC++;
+            sumB = sumB + (sumB / 100) * interestRateB;
+            sumB = sumB + contrbutionB;
+            if (monthC % 6 == 0){
+                System.out.println("Месяц " + monthC + ", сумма накоплений " + sumB + " рублей.");
+            }
+        } while (monthC < 108);
+
+        //Lesson 6 Home Work 7
+        int friday = 5;
+        while (friday <=31){
+            System.out.println("Сегодня " + friday + " число, пятница! Надо подготовить отчет.");
+            friday += 7;
+        }
+
+        //Lesson 6 Home Work 8
+        int juniorYear = 1824;
+        int endYear = 2124;
+        int realYear = 0;
+        while (realYear < endYear){
+            realYear += 79;
+            if (realYear >juniorYear & realYear < endYear){
+                System.out.println(realYear);
+            }
+        }
+
+
     }
+}
