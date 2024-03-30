@@ -5,47 +5,42 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        //Lesson 7 HomeWork 1
-        int[] num = new int[3];
-        for (int i = 0; i < num.length; i++) {
-            num[i] = i + 1;
+        //Lesson_8 HomeWork 1
+        int[] salary = {35000, 50000, 15000, 40000, 30000};
+        double sum = 0;
+        for (int i = 0; i < salary.length; i++) {
+            sum = sum + salary[i];
         }
-        System.out.println(Arrays.toString(num));
-        double[] ch = {1.57, 7.654, 9.986};
-        System.out.println(Arrays.toString(ch));
-        String[] names = {"Oleg", "Alex", "John"};
-        System.out.println(Arrays.toString(names));
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
-        //Lesson 7 HomeWork 2
-        //все элементы в нужном формате были выведены в ходе решения первой задачи.
-        //Lesson 7 HomeWork 3
-        for (int i = num.length; i > 0; i--) {
-            if (i > 1) {
-                System.out.print(num[i - 1] + ", ");
-            } else {
-                System.out.println(num[i - 1]);
+        //Lesson_8 HomeWork 2
+        int min = 100_000;
+        int max = 0;
+        for (int i = 0; i < salary.length; i++) {
+            if(salary[i] < min){
+                min = salary[i];
             }
         }
-        for (int i = ch.length; i > 0; i--) {
-            if (i > 1) {
-                System.out.print(ch[i - 1] + ", ");
-            } else {
-                System.out.println(ch[i - 1]);
+        for (int i = 0; i < salary.length; i++) {
+            if(salary[i] > max){
+                max = salary[i];
             }
         }
-        for (int i = names.length; i > 0; i--) {
-            if (i > 1) {
-                System.out.print(names[i - 1] + ", ");
-            } else {
-                System.out.println(names[i - 1]);
-            }
+        System.out.println("Минимальная сумма трат за неделю составила " + min + " рублей." +
+                " Максимальная сумма трат за неделю составила " + max + " рублей");
+
+        //Lesson_8 HomeWork 3
+        double[] salaryNew = {35000, 50000, 15000, 40000, 30000};
+        double sumNew = 0;
+        for (int i = 0; i < salaryNew.length; i++) {
+            sumNew = sumNew + salaryNew[i];
         }
-        //Lesson 7 HomeWork 4
-        for (int i = 0; i < num.length; i++) {
-            if (num[i] % 2 != 0) {
-                num[i] = num[i] + 1;
-            }
+        System.out.println("Средняя сумма трат за месяц составила " + sumNew / 4 + " рублей");
+
+        //Lesson_8 HomeWork 4
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
-        System.out.println(Arrays.toString(num));
     }
 }
