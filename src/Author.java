@@ -21,15 +21,15 @@ public class Author {
         return this.lostName;
     }
 
-    public void setFirstName() {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public void setMidName() {
+    public void setMidName(String midName) {
         this.midName = midName;
     }
 
-    public void setLostName() {
+    public void setLostName(String lostName) {
         this.lostName = lostName;
     }
 }

@@ -6,7 +6,7 @@ public class Book {
     }
 
     private String nameBook;
-    Author author;
+    private Author author;
     private int years;
 
     public String getNameBook() {
@@ -17,7 +17,7 @@ public class Book {
         return this.years;
     }
 
-    public void setNameBook() {
+    public void setNameBook(String nameBook) {
         this.nameBook = nameBook;
     }
 

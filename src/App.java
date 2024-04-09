@@ -15,6 +15,11 @@ public class App {
         //Меняем год издания первой книги и проверяем
         book1.setYears(2024);
         System.out.println("book1.getYears() = " + book1.getYears());
+        //Проверяем остальные методы "set"
+        book1.setNameBook("Методика");
+        System.out.println("book1.getNameBook() = " + book1.getNameBook());
+        author2.setLostName("Валерьевич");
+        System.out.println("author2.getLostName() = " + author2.getLostName());
 
     }
 }
