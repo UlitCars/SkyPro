@@ -32,4 +32,22 @@ public class Author {
     public void setLostName(String lostName) {
         this.lostName = lostName;
     }
+
+    public String toStringName (){
+        return "Автор " + firstName + " " + midName + " " + lostName + " ";
+    }
+
+    @Override
+    public boolean equals(Object other){
+        if (this.getClass() != other.getClass()){
+            return false;
+        }
+        Author a2 = (Author) other;
+        return lostName.equals(a2.lostName);
+    }
+
+    @Override
+    public int hashCode(){
+        return java.util.Objects.hash(lostName);
+    }
 }
