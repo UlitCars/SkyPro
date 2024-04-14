@@ -27,8 +27,9 @@ public class Book {
         this.years = years;
     }
 
-    public String toStringBook (){
-        return author.toStringName() + "Название книги " + getNameBook() + " Год выпуска : " + getYears();
+    @Override
+    public String toString (){
+        return author.toString() + "Название книги " + getNameBook() + " Год выпуска : " + getYears();
     }
 
     @Override

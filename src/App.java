@@ -23,7 +23,7 @@ public class App {
         author2.setLostName("Валерьевич");
         System.out.println("author2.getLostName() = " + author2.getLostName());
 
-        System.out.println("book2.toStringBook() = " + book2.toStringBook());
+        System.out.println("book2.toStringBook() = " + book2.toString());
 
     }
 }
