@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class App {
 
     public static void main(String[] args) {
@@ -20,6 +22,8 @@ public class App {
         System.out.println("book1.getNameBook() = " + book1.getNameBook());
         author2.setLostName("Валерьевич");
         System.out.println("author2.getLostName() = " + author2.getLostName());
+
+        System.out.println("book2.toStringBook() = " + book2.toString());
 
     }
 }
