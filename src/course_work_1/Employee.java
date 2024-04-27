@@ -47,14 +47,12 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(fIO, department, salary);
     }
-
     public Employee(String fIO, String department, float salary) {
         this.fIO = fIO;
         this.department = department;
         this.salary = salary;
         id = count++;
     }
-
     @Override
     public String toString() {
         return "ID: " + id + " | ФИО: " + fIO + " | " +
