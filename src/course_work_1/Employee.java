@@ -61,6 +61,4 @@ public class Employee {
                 " Должность : " + department + " | " +
                 " Зарплата : " + salary;
     }
-
-
 }
