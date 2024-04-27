@@ -25,6 +25,18 @@ public class Main {
         System.out.println("Максимальная зарплата = " + maxSalary());
         System.out.println("Средняя зарплата сотрудника = " + averageSalary());
         allFullNames();
+        System.out.println(salarySumDepartment("Бухгалтер"));
+        System.out.println(maxSalaryDepartment("Юрист"));
+        System.out.println(minSalaryDepartment("Инженер"));
+        System.out.println(salaryAerageDepartment("Инженер"));
+        indexation(10);
+        printOffice();
+        indexationDepartment(5, "Инженер");
+        printOffice();
+        printPersonDepartmen("Бухгалтер");
+        printPersonSalaryMax(50000);
+        printPersonSalaryMin(50000);
+
 
     }
 
@@ -70,6 +82,87 @@ public class Main {
         for (Employee employee : office) {
             System.out.println(employee.getfIO());
 
+        }
+    }
+    private static void indexation(int percent){
+        for (Employee employee : office) {
+            float newSalary = employee.getSalary() + (employee.getSalary() * percent)/100;
+            employee.setSalary(newSalary);
+        }
+    }
+    private static double salarySumDepartment(String department) {
+        double sum = 0;
+        for (Employee employee : office) {
+            if (department.equals(employee.getDepartment())) {
+                sum += employee.getSalary();
+            }
+        }
+        return sum;
+    }
+    private static Employee minSalaryDepartment(String department) {
+        Employee min = null;
+        for (Employee employee : office) {
+            if (!department.equals(employee.getDepartment())) {
+                continue;
+            }
+            if (min == null || employee.getSalary() < min.getSalary()) {
+                min = employee;
+            }
+        }
+        return min;
+    }
+    private static Employee maxSalaryDepartment(String department) {
+        Employee max = null;
+        for (Employee employee : office) {
+            if (!department.equals(employee.getDepartment())) {
+                continue;
+            }
+            if (max == null || employee.getSalary() > max.getSalary()) {
+                max = employee;
+            }
+        }
+        return max;
+    }
+    private static double salaryAerageDepartment(String department) {
+        int person = 0;
+        double salarySum = 0;
+        for (Employee employee : office) {
+            if (!department.equals(employee.getDepartment())) {
+                continue;
+            }
+            person++;
+            salarySum += employee.getSalary();
+        }
+        return salarySum / person;
+    }
+    private static void indexationDepartment(int percent, String department){
+        for (Employee employee : office) {
+            if (!department.equals(employee.getDepartment())) {
+                continue;
+            }
+            float newSalary = employee.getSalary() + (employee.getSalary() * percent)/100;
+            employee.setSalary(newSalary);
+        }
+    }
+    private static void printPersonDepartmen(String department){
+        for (Employee employee : office) {
+            if (!department.equals(employee.getDepartment())) {
+                continue;
+            } System.out.println(employee);
+        }
+    }
+    private static void printPersonSalaryMax(double salary){
+        for (Employee employee : office) {
+            if(employee.getSalary()>=salary){
+                System.out.println("ФИО: " + employee.getfIO() + " ID: " + employee.getId() + " ЗП: " + employee.getSalary());
+            }
+        }
+    }
+    private static void printPersonSalaryMin(double salary){
+        for (Employee employee : office) {
+            if(employee.getSalary()<=salary){
+                System.out.println("ФИО: " + employee.getfIO() + " ID: " + employee.getId() + " ЗП: " + employee.getSalary());
+            }
         }
     }
 
