@@ -20,10 +20,12 @@ public class Main {
         employeeBook.addPerson("Дудь Игорь Петрович", "Инженер", 65000);
         employeeBook.addPerson("Свиридов Иван Петрович", "Инженер", 32000);
         employeeBook.printOffice();
-        employeeBook.remotePerson(9);
+        employeeBook.remotePerson(1);
         employeeBook.printOffice();
         System.out.println(employeeBook.salarySum());
         System.out.println("employeeBook.searchPersonId(8) = " + employeeBook.searchPersonId(8));
         System.out.println("employeeBook.searchPersonId(9) = " + employeeBook.searchPersonId(9));
+        System.out.println("employeeBook.minSalary() = " + employeeBook.minSalary());
+        System.out.println("employeeBook.averageSalary() = " + employeeBook.averageSalary());
     }
 }

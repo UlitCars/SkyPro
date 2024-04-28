@@ -52,12 +52,12 @@ public class EmployeeBook {
     }
 
     public Employee minSalary() {
-        Employee min = office[0];
+        Employee min = null;
         for (Employee employee : office) {
             if (employee == null) {
                 continue;
             }
-            if (employee.getSalary() < min.getSalary()) {
+            if (min == null || employee.getSalary() < min.getSalary()) {
                 min = employee;
             }
         }
@@ -65,12 +65,12 @@ public class EmployeeBook {
     }
 
     public Employee maxSalary() {
-        Employee max = office[0];
+        Employee max = null;
         for (Employee employee : office) {
             if (employee == null) {
                 continue;
             }
-            if (employee.getSalary() > max.getSalary()) {
+            if (max == null || employee.getSalary() > max.getSalary()) {
                 max = employee;
             }
         }
@@ -78,7 +78,15 @@ public class EmployeeBook {
     }
 
     public double averageSalary() {
-        return salarySum() / office.length;
+        int personsAll = 0;
+        for (Employee employee : office) {
+            if (employee == null) {
+                continue;
+            } else {
+                personsAll++;
+            }
+        }
+        return salarySum() / personsAll;
     }
 
     public void allFullNames() {
