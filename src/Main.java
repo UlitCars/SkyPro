@@ -1,31 +1,35 @@
-import course_work_1.Employee;
-import course_work_1.EmployeeBook;
-
-import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Random;
+import course2_work_4.WrongLoginExeption;
+import course2_work_4.WrongPasswordExeption;
 
 public class Main {
+    private static final String REGEX = "^[a-zA-Z0-9_]*$";
+    private static final String ALLOWED_CHARS = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_";
 
     public static void main(String[] args) {
-        EmployeeBook employeeBook = new EmployeeBook();
-        employeeBook.addPerson("Иванов Иван Иванович", "Юрист", 65000);
-        employeeBook.addPerson("Семенов Семен Семенович", "Бухгалтер", 60000);
-        employeeBook.addPerson("Петров Петр Петрович", "Инженер", 55000);
-        employeeBook.addPerson("Сидоров Глеб Фёдорович", "Инженер", 50000);
-        employeeBook.addPerson("Пушкин Михаил Сергеевич", "Юрист", 60000);
-        employeeBook.addPerson("Васильков Фёдор Петрович", "Инженер", 70000);
-        employeeBook.addPerson("Сыч Михаил Иванович", "Бухгалтер", 75000);
-        employeeBook.addPerson("Фил Пётр Сергеевич", "Флорист", 80000);
-        employeeBook.addPerson("Дудь Игорь Петрович", "Инженер", 65000);
-        employeeBook.addPerson("Свиридов Иван Петрович", "Инженер", 32000);
-        employeeBook.printOffice();
-        employeeBook.remotePerson(1);
-        employeeBook.printOffice();
-        System.out.println(employeeBook.salarySum());
-        System.out.println("employeeBook.searchPersonId(8) = " + employeeBook.searchPersonId(8));
-        System.out.println("employeeBook.searchPersonId(9) = " + employeeBook.searchPersonId(9));
-        System.out.println("employeeBook.minSalary() = " + employeeBook.minSalary());
-        System.out.println("employeeBook.averageSalary() = " + employeeBook.averageSalary());
+        try {
+            checkCredentials("Zhuk>", "9992", "9992");
+            System.out.println("Проверка пройдена");
+        } catch (WrongLoginExeption | WrongPasswordExeption e) {
+            System.out.println("Проверка не пройдена");
+            e.printStackTrace();
+        }
+    }
+
+    public static void checkCredentials(String login, String password, String confirmPassword) {
+        if (login.length() > 20) {
+            throw new WrongLoginExeption("Длинна логина больше 20 символов");
+        }
+        if (!login.matches(REGEX)) {
+            throw new WrongLoginExeption("Логин содержит недопустимые символы");
+        }
+        if (password.length() > 20) {
+            throw new WrongPasswordExeption("Длинна пароля больше 20 символов");
+        }
+        if (!password.matches(REGEX)) {
+            throw new WrongPasswordExeption("Пароль содержит недопустимые символы");
+        }
+        if (!password.equals(confirmPassword)) {
+            throw new WrongPasswordExeption("Пароли не совпадают");
+        }
     }
 }
